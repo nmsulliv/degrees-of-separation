@@ -115,6 +115,16 @@ def shortest_path(source, target):
           return node.path_cost
         explored.add(node)
 
+        in_frontier = frontier.contains_state(node.state)
+        in_explored = node in explored
+        if (not in_frontier and not in_explored):
+            neighbors = neighbors_for_person(node.state)
+            for neighbor in neighbors:
+                new_node = Node(neighbor.person_id, node.state, neighbor.movie)
+                if (node.parent != None):
+                    new_node.path_cost = node.path_cost
+                    new_node.add_pair(node.action, node.state)
+          
     return path
 
 
