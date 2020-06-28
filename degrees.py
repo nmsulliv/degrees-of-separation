@@ -122,7 +122,6 @@ def shortest_path(source, target):
                     new_node.path_cost = node.path_cost
                 new_node.add_pair(neighbor[0], neighbor[1])
                 frontier.add(new_node)
-
     return path
 
 
