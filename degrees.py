@@ -99,9 +99,13 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
+    source_id = person_id_for_name(source)
+    target_id = person_id_for_name(target)
+    path = dict()
+    explored = set()
 
-    # TODO
-    raise NotImplementedError
+    frontier = QueueFrontier()
+    return path
 
 
 def person_id_for_name(name):
