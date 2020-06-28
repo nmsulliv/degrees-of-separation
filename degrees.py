@@ -101,30 +101,28 @@ def shortest_path(source, target):
     """
     frontier = QueueFrontier()
     explored = set()
-    path = dict()
+    path = []
 
-    target_id = person_id_for_name(source)
-
-    source_id = person_id_for_name(source)
-    source_node = Node(source_id, None, None)
+    source_node = Node(source, None, None)
 
     frontier.add(source_node)
     while ((frontier.empty()) == False):
         node = frontier.remove()
-        if (node.state == target_id):
-          return node.path_cost
+        if (node.state == target):
+          path = node.path_cost
+          return path
         explored.add(node)
 
-        in_frontier = frontier.contains_state(node.state)
-        in_explored = node in explored
-        if (not in_frontier and not in_explored):
-            neighbors = neighbors_for_person(node.state)
-            for neighbor in neighbors:
-                new_node = Node(neighbor.person_id, node.state, neighbor.movie)
+        neighbors = neighbors_for_person(node.state)
+        for neighbor in neighbors:
+            in_frontier = frontier.contains_state(neighbor[1])
+            if (not in_frontier):
+                new_node = Node(neighbor[1], node.state, neighbor[0])
                 if (node.parent != None):
                     new_node.path_cost = node.path_cost
-                    new_node.add_pair(node.action, node.state)
-          
+                new_node.add_pair(neighbor[0], neighbor[1])
+                frontier.add(new_node)
+
     return path
 
 
