@@ -99,12 +99,17 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
-    source_id = person_id_for_name(source)
-    target_id = person_id_for_name(target)
-    path = dict()
-    explored = set()
-
     frontier = QueueFrontier()
+    explored = set()
+    path = dict()
+
+    target_id = person_id_for_name(source)
+
+    source_id = person_id_for_name(source)
+    source_node = Node(source, None, neighbors_for_person(source_id))
+
+    frontier.add(source_node)
+
     return path
 
 
