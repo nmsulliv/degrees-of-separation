@@ -106,10 +106,15 @@ def shortest_path(source, target):
     target_id = person_id_for_name(source)
 
     source_id = person_id_for_name(source)
-    source_node = Node(source_id, None, neighbors_for_person(source_id))
+    source_node = Node(source_id, None, None)
 
     frontier.add(source_node)
-      
+    while ((frontier.empty()) == False):
+        node = frontier.remove()
+        if (node.state == target_id):
+          return node.path_cost
+        explored.add(node)
+
     return path
 
 
