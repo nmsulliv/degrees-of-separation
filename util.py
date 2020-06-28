@@ -3,6 +3,11 @@ class Node():
         self.state = state
         self.parent = parent
         self.action = action
+        self.path_cost = []
+
+    def add_pair(self, movie, person):
+        pair = (movie, person)
+        self.path_cost.append(pair)
 
 
 class StackFrontier():
