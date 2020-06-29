@@ -123,11 +123,11 @@ def shortest_path(source, target):
 
 
 def backtrack(path, target):
-    target_ptr = target
-    while(target_ptr.parent is not None):
-        pair = (target_ptr.action, target_ptr.state)
+    pointer = target
+    while(pointer.parent is not None):
+        pair = (pointer.action, pointer.state)
         path.append(pair)
-        target_ptr = target_ptr.parent
+        pointer = pointer.parent
     path.reverse()
     return path
 
