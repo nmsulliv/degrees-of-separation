@@ -102,34 +102,28 @@ def shortest_path(source, target):
     frontier = QueueFrontier()
     explored = set()
     path = []
-
     source_node = Node(source, None, None)
 
     frontier.add(source_node)
     while ((frontier.empty()) == False):
-        node = frontier.remove()
-        neighbors = neighbors_for_person(node.state)
-        if (any(target == neighbor[1] for neighbor in neighbors)):
-            for neighbor in neighbors:
-                if (neighbor[1] == target):
-                    new_node = Node(target, node.state, neighbor[0])
-                    if (node.parent != None):
-                        new_node.path_cost = node.path_cost
-                    new_node.add_pair(neighbor[0], neighbor[1])
-                    path = new_node.path_cost
-                    return path
-        explored.add(node)
+        parent = frontier.remove()
+        explored.add(parent)
 
+        neighbors = neighbors_for_person(parent.state)
         for neighbor in neighbors:
             in_frontier = frontier.contains_state(neighbor[1])
-            in_explored = any(node.state == neighbor[1] for node in explored)
+            in_explored = any(parent.state == neighbor[1] for parent in explored)
             if (not in_frontier and not in_explored):
-                new_node = Node(neighbor[1], node.state, neighbor[0])
-                if (node.parent != None):
-                    new_node.path_cost = node.path_cost
-                new_node.add_pair(neighbor[0], neighbor[1])
-                frontier.add(new_node)
-
+                neighbor_node = Node(neighbor[1], parent, neighbor[0])
+                frontier.add(neighbor_node)
+                if (neighbor_node.state == target):
+                    target_ptr = neighbor_node
+                    while(target_ptr.parent is not None):
+                      pair = (target_ptr.action, target_ptr.state)
+                      path.append(pair)
+                      target_ptr = target_ptr.parent
+                    path.reverse()
+                    return path
     return path
 
 
