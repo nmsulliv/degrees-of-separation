@@ -89,14 +89,6 @@ def shortest_path(source, target):
     Returns the shortest list of (movie_id, person_id) pairs
     that connect the source to the target.
 
-    Example:
-    Name: Emma Watson
-    Name: Jennifer Lawrence
-    3 degrees of separation.
-    1: Emma Watson and Brendan Gleeson starred in Harry Potter and the Order of the Phoenix
-    2: Brendan Gleeson and Michael Fassbender starred in Trespass Against Us
-    3: Michael Fassbender and Jennifer Lawrence starred in X-Men: First Class
-
     If no possible path, returns None.
     """
     frontier = QueueFrontier()
@@ -123,6 +115,10 @@ def shortest_path(source, target):
 
 
 def backtrack(path, target):
+    """
+    Given the found target node, this returns the path of 
+    (movie_id, person_id) pairs that connect the source to the target.
+    """
     pointer = target
     while(pointer.parent is not None):
         pair = (pointer.action, pointer.state)
@@ -130,6 +126,7 @@ def backtrack(path, target):
         pointer = pointer.parent
     path.reverse()
     return path
+
 
 def person_id_for_name(name):
     """
