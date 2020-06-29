@@ -117,15 +117,19 @@ def shortest_path(source, target):
                 neighbor_node = Node(neighbor[1], parent, neighbor[0])
                 frontier.add(neighbor_node)
                 if (neighbor_node.state == target):
-                    target_ptr = neighbor_node
-                    while(target_ptr.parent is not None):
-                      pair = (target_ptr.action, target_ptr.state)
-                      path.append(pair)
-                      target_ptr = target_ptr.parent
-                    path.reverse()
+                    path = backtrack(path, neighbor_node)
                     return path
     return path
 
+
+def backtrack(path, target):
+    target_ptr = target
+    while(target_ptr.parent is not None):
+        pair = (target_ptr.action, target_ptr.state)
+        path.append(pair)
+        target_ptr = target_ptr.parent
+    path.reverse()
+    return path
 
 def person_id_for_name(name):
     """
