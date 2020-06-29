@@ -116,8 +116,8 @@ def shortest_path(source, target):
 
 def backtrack(path, target):
     """
-    Given the found target node, this returns the path of 
-    (movie_id, person_id) pairs that connect the source to the target.
+    Returns the path of (movie_id, person_id) pairs that
+    connect the target to the source.
     """
     pointer = target
     while(pointer.parent is not None):
