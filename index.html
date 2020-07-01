@@ -4,6 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Degrees of Separation</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="hero-text">
@@ -16,7 +18,7 @@
         apart two actors are given an IMDb dataset. 
       </p>
     </div>
-    <div class="form-container">
+    <div class="form-container" onsubmit="verifyNames();">
       <h3>Please enter two actors</h3>
       <form>
         <label for="actor-one">Actor 1:</label>
