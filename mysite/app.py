@@ -11,7 +11,7 @@ def adder_page():
     errors = ""
 
     if request.method == "POST":
-        load_data("/mysite/small")
+        load_data("/Users/nicolesullivan/Code/degrees/mysite/small")
 
         source = None
         target = None
