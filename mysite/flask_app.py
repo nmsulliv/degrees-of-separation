@@ -9,7 +9,7 @@ def adder_page():
     errors = ""
 
     if request.method == "POST":
-        load_data("mysite/large")
+        load_data("mysite/smallweb")
 
         source = None
         target = None
