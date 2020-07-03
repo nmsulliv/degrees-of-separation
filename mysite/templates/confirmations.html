@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degrees of Separation</title>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='styles/images/apple-touch-icon.png') }}"/>
+  </head>
+  <body>
+    <div class="content">
+      <div class="hero-text">
+        <h1> Degrees of Separation</h1>
+      </div>
+      <div class="form-container">
+        <form method="post" action="/degrees">
+          <input type="hidden" id="actor-one" name="actor-one" value="{{actor1}}">
+          <input type="hidden" id="actor-two" name="actor-two" value="{{actor2}}">
+          <input type="hidden" id="duplicate" name="duplicate" value="{{number}}">
+          <div class="confirmation-container">
+            <div class="confirmation">
+              <p>{{confirmation1}}</p>
+              <input type="text" id="{{confirmed1}}" name="{{confirmed1}}" placeholder="Enter ID" required><br>
+            </div><br>
+            <div class="confirmation">
+              <p>{{confirmation2}}</p>
+              <input type="text" id="{{confirmed2}}" name="{{confirmed2}}" placeholder="Enter ID" required><br>
+            </div>
+          </div>
+          <input type=submit name="action" value="Confirm ID">
+        </form>
+        <p>{{errors}}</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
