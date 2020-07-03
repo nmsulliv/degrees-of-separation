@@ -16,3 +16,20 @@ body {
   min-height: 100vh;
   position: relative;
 }
+
+h1 {
+  color: #F15946;
+  font-family: vt;
+  font-size: 75px;
+  margin-top: 5vh;
+}
+
+h2 {
+  color: #F15946;
+  font-family: vt;
+  font-size: 45px;
+}
+
+h4 {
+  margin-top: 20vh;
+}
