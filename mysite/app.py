@@ -11,7 +11,7 @@ def adder_page():
     errors = ""
 
     if request.method == "POST":
-        load_data("mysite/smallweb")
+        load_data("/mysite/small")
 
         source = None
         target = None
@@ -88,3 +88,6 @@ def adder_page():
             return render_template('result.html', result=value)
 
     return render_template('index.html', confirmation=confirmation, errors=errors)
+
+if __name__=="__main__":
+    app.run()
