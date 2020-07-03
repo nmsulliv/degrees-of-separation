@@ -40,6 +40,7 @@ p {
 
 a:link {
   color: #F15946;
+  text-decoration: none;
   transition-duration: 0.4s;
 }
 
@@ -96,6 +97,14 @@ input[type=submit]:hover {
 
 .hero-text {
   text-align: center;
+}
+
+.hero-text h1{
+  transition-duration: 0.4s;
+}
+
+.hero-text h1:hover {
+  color: #fff;
 }
 
 .form-container {
