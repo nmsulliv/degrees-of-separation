@@ -7,3 +7,12 @@
   font-family: vt;
   src: url('fonts/VT323-Regular.ttf');
 }
+
+body {
+  background-color: #9DD1FB;
+  color: #fff;
+  font-family: openSansBold;
+  font-weight: bold;
+  min-height: 100vh;
+  position: relative;
+}
