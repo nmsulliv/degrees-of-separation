@@ -6,4 +6,30 @@
       <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/style.css') }}">
       <link rel="icon" type="image/png" href="{{ url_for('static', filename='styles/images/apple-touch-icon.png') }}"/>
   </head>
+  <body>
+    <div class="content">
+      <div class="hero-text">
+        <h1> Degrees of Separation</h1>
+        <h3>
+          This program  determines how many
+          <a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation" target="_blank">
+          degrees of separation</a>
+          apart two actors are.
+        </h3>
+      </div>
+      <div class="form-container">
+        <h3>Please enter the names of two actors</h3><br>
+        <form class="name-form" method="post" action="/degrees">
+          <input type="text" id="actor-one" name="actor-one" placeholder="Actor 1" required><br><br>
+          <input type="text" id="actor-two" name="actor-two" placeholder="Actor 2" required><br><br>
+          <input type=submit name="action" value="Find degrees"><br><br>
+        </form>
+        <p>{{confirmation}}</p>
+        <p>{{errors}}</p>
+      </div>
+      <div class="footer">
+        <h4>*It's not you, it's us! Please be patient, we're loading and processing over 3.5 million lines of data</h4>
+      </div>
+    </div>
+</body>
 </html>
