@@ -97,3 +97,17 @@ input[type=submit]:hover {
 .hero-text {
   text-align: center;
 }
+
+.form-container {
+  text-align: center;
+}
+
+.confirmation-container {
+  text-align: center;
+}
+
+.confirmation {
+  display: inline-block;
+  margin-bottom: 25px;
+  text-align: left;
+}
