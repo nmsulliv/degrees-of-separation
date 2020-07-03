@@ -61,3 +61,27 @@ input[type=text] {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
+
+input[type=submit] {
+  background-color: #F15946;
+  border-radius:0;
+  border: none;
+  color: white;
+  font-family: vt;
+  font-size: 25px;
+  padding: 10px 20px;
+  transition-duration: 0.4s;
+  -webkit-appearance: none;
+  -webkit-border-radius:0;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  border: none;
+  border-radius:0;
+  color: #9DD1FB;
+  font-family: vt;
+  padding: 10px 20px;
+  -webkit-appearance: none;
+  -webkit-border-radius:0;
+}
