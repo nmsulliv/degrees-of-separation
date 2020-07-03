@@ -1,1 +1,9 @@
+@font-face {
+  font-family: openSansBold;
+  src: url('fonts/OpenSans-Bold.ttf');
+}
 
+@font-face {
+  font-family: vt;
+  src: url('fonts/VT323-Regular.ttf');
+}
