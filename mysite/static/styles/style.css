@@ -50,3 +50,14 @@ a:visited {
 a:hover {
   color: #fff;
 }
+
+input[type=text] {
+  border: none;
+  border-radius: 0;
+  color: #F15946;
+  font-family: vt;
+  font-size: 20px;
+  height: 3vh;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
