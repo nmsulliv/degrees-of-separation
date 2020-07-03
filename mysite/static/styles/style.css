@@ -119,3 +119,17 @@ input[type=submit]:hover {
 .result {
   color: #F15946;
 }
+
+@media only screen and (max-width: 700px) {
+  h1 {
+      font-size: 65px;
+  }
+
+  h2 {
+      font-size: 45px;
+  }
+
+  h3 {
+      font-size: 16px;
+  }
+}
