@@ -33,3 +33,20 @@ h2 {
 h4 {
   margin-top: 20vh;
 }
+
+p {
+  font-size: 18px;
+}
+
+a:link {
+  color: #F15946;
+  transition-duration: 0.4s;
+}
+
+a:visited {
+  color: #F15946;
+}
+
+a:hover {
+  color: #fff;
+}
