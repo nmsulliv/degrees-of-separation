@@ -1,16 +1,17 @@
-import csv
-import sys
-
-from utilities import Node, StackFrontier, QueueFrontier
+import pickle
+from util import Node, QueueFrontier
 
 # Maps names to a set of corresponding person_ids
-names = {}
+pickle_in_n = open("mysite/static/pickle/namesdict.pickle","rb")
+names = pickle.load(pickle_in_n)
 
 # Maps person_ids to a dictionary of: name, birth, movies (a set of movie_ids)
-people = {}
+pickle_in_p = open("mysite/static/pickle/peopledict.pickle","rb")
+people = pickle.load(pickle_in_p)
 
 # Maps movie_ids to a dictionary of: title, year, stars (a set of person_ids)
-movies = {}
+pickle_in_m = open("mysite/static/pickle/moviesdict.pickle","rb")
+movies = pickle.load(pickle_in_m)
 
 
 def load_data(directory):
