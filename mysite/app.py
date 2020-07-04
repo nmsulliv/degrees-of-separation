@@ -10,7 +10,6 @@ def adder_page():
     errors = ""
 
     if request.method == "POST":
-        load_data("/mysite/small")
 
         source = None
         target = None
