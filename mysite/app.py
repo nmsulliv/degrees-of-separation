@@ -1,6 +1,5 @@
 from flask import Flask, Markup, render_template, request
-
-from processing import confirm, display_result, load_data, person_id_for_name
+from processing import confirm, display_result, person_id_for_name
 
 app = Flask(__name__, static_url_path='/static')
 app.config["DEBUG"] = True
