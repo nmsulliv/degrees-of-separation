@@ -80,6 +80,7 @@ def person_id_for_name(name):
     Returns the IMDB id for a person's name,
     resolving ambiguities as needed.
     """
+    name = name.rstrip()
     person_ids = list(names.get(name.lower(), set()))
     if len(person_ids) == 0:
         return None
@@ -96,6 +97,7 @@ def person_id_for_name(name):
         return person_ids[0]
 
 def confirm(name, pid):
+    name = name.rstrip()
     person_ids = list(names.get(name.lower(), set()))
     if pid in person_ids:
         return pid
