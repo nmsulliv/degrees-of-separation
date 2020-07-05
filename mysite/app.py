@@ -84,7 +84,6 @@ def adder_page():
             result = display_result(source, target)
             value = Markup(result)
             return render_template('result.html', result=value)
-
     return render_template('index.html', confirmation=confirmation, errors=errors)
 
 if __name__=="__main__":
