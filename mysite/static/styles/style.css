@@ -58,7 +58,9 @@ input[type=text] {
   color: #F15946;
   font-family: vt;
   font-size: 20px;
-  height: 3vh;
+  height: 6vh;
+  text-align: center;
+  width: 30vh;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
@@ -70,6 +72,7 @@ input[type=submit] {
   color: white;
   font-family: vt;
   font-size: 25px;
+  margin-top: 40px;
   padding: 10px 20px;
   transition-duration: 0.4s;
   -webkit-appearance: none;
@@ -132,17 +135,6 @@ input[type=submit]:hover {
 .back p {
   font-family: vt;
   font-size: 30px;
-}
-
-.footer-result {
-  margin-top: 100px;
-  text-align: center;
-  width: 100%;
-}
-
-.footer-result p {
-  color: #f15946;
-  font-size: 10px;
 }
 
 @media only screen and (max-width: 700px) {
