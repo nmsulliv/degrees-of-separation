@@ -20,7 +20,11 @@ def display_result(source, target):
         pathway = "Not Connected."
     else:
         degrees = len(result)
-        degrees_string = "<h2>" + str(degrees) + " degrees of separation  </h2><br>"
+        degrees_string = "<h2>" + str(degrees)
+        if (degrees != 1):
+            degrees_string += " degrees of separation </h2><br>"
+        else:
+            degrees_string += " degree of separation </h2><br>"
         pathway += degrees_string
         result = [(None, source)] + result
         for i in range(degrees):
