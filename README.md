@@ -7,8 +7,10 @@ You can try it out here: **http://nmsulliv.pythonanywhere.com/degrees**
 It might be slow at times because I only have a free account, so if the
 page doesn't load, wait a bit and try again!
 
+
 ### Starter Code
 Starter code can be found here: https://cs50.harvard.edu/ai/2020/projects/0/degrees/
+
 
 ### Special Thanks
 I'd like to give a special thanks to @Collins1738 for giving me the idea to store the 
