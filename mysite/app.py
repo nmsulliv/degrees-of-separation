@@ -1,6 +1,5 @@
 from flask import Flask, Markup, render_template, request
-
-from processing import confirm, display_result, load_data, person_id_for_name
+from processing import confirm, display_result, person_id_for_name
 
 app = Flask(__name__, static_url_path='/static')
 app.config["DEBUG"] = True
@@ -11,7 +10,6 @@ def adder_page():
     errors = ""
 
     if request.method == "POST":
-        load_data("/mysite/small")
 
         source = None
         target = None
@@ -86,7 +84,6 @@ def adder_page():
             result = display_result(source, target)
             value = Markup(result)
             return render_template('result.html', result=value)
-
     return render_template('index.html', confirmation=confirmation, errors=errors)
 
 if __name__=="__main__":
